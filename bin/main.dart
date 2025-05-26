@@ -1,54 +1,46 @@
 import 'dart:io';
 import '../libs/bank_account.dart';
+import '../libs/styling.dart';
 
 void main() {
-  final account = BankAccount(owner: 'Richard Nzembei', balance: 21000);
-  print('Welcome to Dart Bank, ${account.owner}');
-  print('Your starting balance is: KES ${account.balance}');
-  print('------------------------------------------');
+  showHeader('Welcome to Dart CLI Bank');
+
+  stdout.write('Enter your name: ');
+  final name = stdin.readLineSync() ?? 'Guest';
+  final account = BankAccount(name);
 
   while (true) {
-    print(
-      '\nChoose an operation:\n1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit',
-    );
-    stdout.write('Enter choice (1-4)');
-    final choice = stdin.readLineSync();
+    print('\nHi $name! What would you like to do?');
+    print('1. Deposit');
+    print('2. Withdraw');
+    print('3. Check Balance');
+    print('4. View History');
+    print('5. Exit');
+    stdout.write('Enter choice: ');
+    final input = stdin.readLineSync();
 
-    switch (choice) {
+    switch (input) {
       case '1':
         stdout.write('Enter amount to deposit: ');
-        final input = stdin.readLineSync();
-        try {
-          final amount = double.parse(input!);
-          account.deposit(amount);
-        } catch (e) {
-          print('Invalid deposit: $e');
-        }
+        final amount = double.tryParse(stdin.readLineSync() ?? '') ?? 0;
+        account.deposit(amount);
         break;
-
       case '2':
         stdout.write('Enter amount to withdraw: ');
-        final input = stdin.readLineSync();
-        try {
-          final amount = double.parse(input!);
-          account.withdraw(amount);
-        } on InsufficientBalanceException catch (e) {
-          print('Withdrawal failed: ${e.message}');
-        } catch (e) {
-          print('invalid withdrawal: $e');
-        }
+        final amount = double.tryParse(stdin.readLineSync() ?? '') ?? 0;
+        account.withdraw(amount);
         break;
-
       case '3':
-        print('Your balance is: KES ${account.balance}');
+        account.showBalance();
         break;
-
       case '4':
-        print('Thanks for using Dart Bank');
+        account.showHistory();
+        break;
+      case '5':
+        print('Thanks for using Dart Bank!');
         return;
-
       default:
-        print('Invalid Option. Try again');
+        print('Invalid option. Try again.');
     }
   }
 }
