@@ -1,5 +1,5 @@
 import 'dart:io';
-import './libs/bank_account.dart';
+import '../libs/bank_account.dart';
 
 void main() {
   final account = BankAccount(owner: 'Richard Nzembei', balance: 21000);
