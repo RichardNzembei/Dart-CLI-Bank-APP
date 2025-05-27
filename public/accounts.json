@@ -1,0 +1,38 @@
+{
+    "1001": {
+  "name": "Richard Nzembei",
+   "pin": "6947",
+  "balance": 2500000.0,
+  "history": [
+    { "type": "deposit", "amount": 1000.0, "timestamp": "2025-05-26T12:00:00Z" },
+    { "type": "withdrawal", "amount": 500.0, "timestamp": "2025-05-26T13:00:00Z" }
+  ]
+},
+    "1002": {
+  "name": "Christine Reuben",
+   "pin": "2755",
+  "balance": 150000.0,
+  "history": [
+    { "type": "deposit", "amount": 2000.0, "timestamp": "2025-05-26T14:00:00Z" },
+    { "type": "withdrawal", "amount": 500.0, "timestamp": "2025-05-26T15:00:00Z" }
+  ]
+},
+    "1003": {
+  "name": "Wycliffe Reuben",
+   "pin": "8678",
+  "balance": 500000.0,
+  "history": [
+    { "type": "deposit", "amount": 3000.0, "timestamp": "2025-05-26T16:00:00Z" },
+    { "type": "withdrawal", "amount": 1000.0, "timestamp": "2025-05-26T17:00:00Z" }
+  ]
+},
+    "1004": {
+  "name": "Mwendwa Reuben",
+   "pin": "4535",
+  "balance": 7500000.0,
+  "history": [
+    { "type": "deposit", "amount": 5000.0, "timestamp": "2025-05-26T18:00:00Z" },
+    { "type": "withdrawal", "amount": 2000.0, "timestamp": "2025-05-26T19:00:00Z" }
+  ]
+}
+}
