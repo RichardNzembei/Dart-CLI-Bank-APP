@@ -29,7 +29,7 @@ This app supports **multiple user accounts**, **secure login using PIN**, **bala
 ---
 
 ## 🗂 Project Structure
-
+```
 Dart-CLI-Bank-APP/
 ├── bin/
 │ └── main.dart # App entry point
@@ -39,8 +39,9 @@ Dart-CLI-Bank-APP/
 | └── styling.dart # Contains Stling for the Header in Main.dart
 ├── public/
 │ └── accounts.json # Stores user accounts and history
+```
 
-
+---
 ## 🚀 Run the App
 
 Make sure Dart is installed, then run:
