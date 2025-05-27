@@ -1,8 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
 import '../libs/bank_account.dart';
+import '../libs/styling.dart';
 
 Future<void> main() async {
+  showHeader("Welcome to Dart CLI Bank");
   final accounts = await loadAccounts();
 
   final loggedInAccountNo = await login(accounts);
